@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- The following is an example of the result document of the RSS_Import_Support/itemImport XML resource.  The rssImportResult.dtd (in the AppSupport folder) is used in that resource with the rssImportResult/@channelName attribute mapped to the single HTML parameter "channelName," added to the request by this extension following the import.  The sys_xdCopyDom exit is then used as a "post" exit in order to copy the private request object added by the importer, named in the "statusParam" parameter, to the root of the resource's result document.-->
+<rssImportResult channelName="Hummingbird Item Import">
+	<channelStatus>
+		<status>Success</status>
+		<message>Channel loaded.  Item status below:</message>
+		<items>
+			<item id="DMSDR1S1364037" version="1">
+				<status>Success</status>
+				<message>Item created</message>
+				<locator sys_contentid="1131" sys_revision="1"/>
+			</item>
+		</items>
+	</channelStatus>
+</rssImportResult>

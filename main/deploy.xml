@@ -1,0 +1,102 @@
+<project name="Rhino Dynamic Delivery Deploy" default="dist" basedir=".">
+	<description>
+       Deployment Script Rhino Dynamic Delivery 
+    </description>
+    
+    <property environment="env"/>
+	<!-- base directory of Rhythmyx installation --> 
+	<property name="rx.home" location="${env.RHYTHMYX_HOME}"/>
+	<!-- name of our output jar --> 
+	<property name="jarname" value="PSORSSItemImporter.jar" />	
+	
+	<property name="lib" location="lib"/>
+	
+	<property name="rx.deploy" value="${rx.home}/AppServer/server/rx/deploy" /> 
+	<property name="rx.rxapp"  value="${rx.deploy}/rxapp.ear/rxapp.war" /> 
+	<property name="rx.rxpub"  value="${rx.deploy}/RxServices.war"/> 
+	<property name="rx.rxapp.lib"    value="${rx.rxapp}/WEB-INF/lib"/>
+	
+	<property name="rx.rxpub.lib" value="${rx.rxpub}/WEB-INF/lib" />
+	<property name="rx.rxpub.spring-config" value="${rx.rxpub}/WEB-INF/config/spring" /> 
+		
+	<property name="rx.rxapp" value="${rx.deploy}/rxapp.ear/rxapp.war" />
+	<property name="rx.rxapp.web-inf" value="${rx.rxapp}/WEB-INF" />
+	<property name="rx.spring" value="${rx.rxapp.web-inf}/config/user/spring"/>
+	<property name="rx.rxapp.lib" value="${rx.rxapp.web-inf}/lib" />
+	<property name="rx.rxapp.pages" value="${rx.deploy}/rxapp.ear/rxapp.war/user/pages" />
+	
+	<target name="installExtensions">
+	    <fail unless="rx.home" message="You must set the RHYTHMYX_HOME environment variable" />
+		<java classname="com.percussion.util.PSExtensionInstallTool" fork="true">
+		    <arg value="${rx.home}" />
+			<arg value="${basedir}" />
+			<classpath>
+			    <fileset dir="${rx.home}/AppServer/lib/endorsed" />
+				<fileset dir="${rx.home}/AppServer/server/rx/lib" />
+				<fileset dir="${rx.rxapp.lib}"/>
+			</classpath>			
+		</java>     
+	</target>
+	
+	<target name="dispatchServlet" description="adds the necessary property to the UserDispatcher-servlet and copies the new file">
+			<echo>Transforming UserDispatcher-servlet XML</echo>
+			<delete dir="xtmp" />
+			<mkdir dir="xtmp" />
+			<copy file="${rx.spring}/UserDispatcher-servlet.xml" todir="xtmp"/>
+			<xslt in="xtmp/UserDispatcher-servlet.xml" style="addProp.xslt" out="xtmp/Output.xml" force="yes">
+				    <xmlcatalog>
+       					 <dtd 
+            				publicId="-//SPRING//DTD BEAN//EN"
+            				location="spring-beans.dtd"/>
+    				</xmlcatalog>	
+			</xslt>
+			<echo>Updated UserDispatcher-servlet.xml</echo>
+			<copy file="xtmp/Output.xml" tofile="${rx.spring}/UserDispatcher-servlet.xml" verbose="true" />
+			<delete dir="xtmp" />
+		</target>
+	
+	<target name="deployServer" description="deployment of server jars and config">		
+	       <fail unless="rx.rxapp.lib" message="You must set the RHYTHMYX_HOME environment variable" />		
+		    <copy todir="${rx.rxapp.lib}" verbose="true"> 
+		        <fileset dir="${lib}">
+		        	<include name="${jarname}"/>
+		        	<include name="informa.jar"/>
+					<include name="commons-configuration-1.2.jar"/>
+					<include name="jdom.jar"/>
+		   
+		        </fileset>
+		    </copy>
+		    <chmod perm="755" verbose="true">
+                <fileset dir="${rx.rxapp.lib}">
+  			       <include name="${jarname}"/>
+		        </fileset>
+			</chmod>
+		
+			<antcall target="web-inf" />
+			<antcall target="dispatchServlet" /> 	
+	</target>
+	
+	<target name="web-inf" description="webinf">
+			<fail unless="rx.rxapp.web-inf" message="You must set the RHYTHMYX_HOME environment variable" />
+			<!-- <copy todir="${rx.rxapp.web-inf}/${target.prefix}" verbose="true">
+				<fileset dir="WEB-INF/${target.prefix}"/>
+			</copy>
+			-->
+			<copy todir="${rx.spring}" verbose="true">
+				<fileset dir="spring">
+					<include name="**" />
+				</fileset>
+			</copy>
+		<copy todir="${rx.rxapp.pages}" verbose="true">
+			<fileset dir="pages">
+				<include name="**" />
+			</fileset>
+		</copy>
+		</target>
+	
+	<target name="dist" description="Default target deploys all">
+		<fail unless="rx.home" message="You must set the RHYTHMYX_HOME environment variable" />		
+		<antcall target="installExtensions"/>
+		<antcall target="deployServer" />
+	</target>
+</project>    

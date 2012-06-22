@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/psolib/!svn/ver/2547/PSORSSItemImporter/main/src/com/percussion/pso/rssimport
+END
+PSORSSImportStatus.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/psolib/!svn/ver/1859/PSORSSItemImporter/main/src/com/percussion/pso/rssimport/PSORSSImportStatus.java
+END
+IPSORSSImportStatusMessages.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/psolib/!svn/ver/1859/PSORSSItemImporter/main/src/com/percussion/pso/rssimport/IPSORSSImportStatusMessages.java
+END
+PSORSSItemImporter.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/psolib/!svn/ver/2547/PSORSSItemImporter/main/src/com/percussion/pso/rssimport/PSORSSItemImporter.java
+END
+PSOFileUploadBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/psolib/!svn/ver/1859/PSORSSItemImporter/main/src/com/percussion/pso/rssimport/PSOFileUploadBean.java
+END
+PSORSSImportStatusMessage.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/psolib/!svn/ver/343/PSORSSItemImporter/main/src/com/percussion/pso/rssimport/PSORSSImportStatusMessage.java
+END
+PSOFeedUploadController.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/psolib/!svn/ver/1859/PSORSSItemImporter/main/src/com/percussion/pso/rssimport/PSOFeedUploadController.java
+END
+PSORSSItemDataMap.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/psolib/!svn/ver/1859/PSORSSItemImporter/main/src/com/percussion/pso/rssimport/PSORSSItemDataMap.java
+END
+PSORSSItemLookupResult.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/psolib/!svn/ver/343/PSORSSItemImporter/main/src/com/percussion/pso/rssimport/PSORSSItemLookupResult.java
+END
+PSORSSItemData.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/psolib/!svn/ver/1859/PSORSSItemImporter/main/src/com/percussion/pso/rssimport/PSORSSItemData.java
+END
+PSORSSItemManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/psolib/!svn/ver/2547/PSORSSItemImporter/main/src/com/percussion/pso/rssimport/PSORSSItemManager.java
+END
+IPSORSSImportPostProcessor.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/psolib/!svn/ver/1859/PSORSSItemImporter/main/src/com/percussion/pso/rssimport/IPSORSSImportPostProcessor.java
+END
+PSORSSImportUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/psolib/!svn/ver/1859/PSORSSItemImporter/main/src/com/percussion/pso/rssimport/PSORSSImportUtils.java
+END
+PSORSSChannelConfig.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/psolib/!svn/ver/1859/PSORSSItemImporter/main/src/com/percussion/pso/rssimport/PSORSSChannelConfig.java
+END
+PSORSSItem.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/psolib/!svn/ver/2547/PSORSSItemImporter/main/src/com/percussion/pso/rssimport/PSORSSItem.java
+END
+PSORSSFieldMapping.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/psolib/!svn/ver/343/PSORSSItemImporter/main/src/com/percussion/pso/rssimport/PSORSSFieldMapping.java
+END
+PSORSSImportConfig.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/psolib/!svn/ver/1859/PSORSSItemImporter/main/src/com/percussion/pso/rssimport/PSORSSImportConfig.java
+END
+PSORSSItemStatus.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/psolib/!svn/ver/343/PSORSSItemImporter/main/src/com/percussion/pso/rssimport/PSORSSItemStatus.java
+END
+PSORSSChannelManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/psolib/!svn/ver/1859/PSORSSItemImporter/main/src/com/percussion/pso/rssimport/PSORSSChannelManager.java
+END
+PSORSSImportExtensionCall.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/psolib/!svn/ver/343/PSORSSItemImporter/main/src/com/percussion/pso/rssimport/PSORSSImportExtensionCall.java
+END

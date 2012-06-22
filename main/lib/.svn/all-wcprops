@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/psolib/!svn/ver/1859/PSORSSItemImporter/main/lib
+END
+commons-configuration-1.2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/psolib/!svn/ver/343/PSORSSItemImporter/main/lib/commons-configuration-1.2.jar
+END
+dom4j-1.5.2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/psolib/!svn/ver/343/PSORSSItemImporter/main/lib/dom4j-1.5.2.jar
+END
+jta.jar
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/psolib/!svn/ver/343/PSORSSItemImporter/main/lib/jta.jar
+END
+psctoolkit5.jar
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/psolib/!svn/ver/343/PSORSSItemImporter/main/lib/psctoolkit5.jar
+END
+hibernate3.jar
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/psolib/!svn/ver/343/PSORSSItemImporter/main/lib/hibernate3.jar
+END
+commons-collections-3.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/psolib/!svn/ver/343/PSORSSItemImporter/main/lib/commons-collections-3.1.jar
+END
+commons-lang-2.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/psolib/!svn/ver/343/PSORSSItemImporter/main/lib/commons-lang-2.1.jar
+END
+jdom.jar
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/psolib/!svn/ver/343/PSORSSItemImporter/main/lib/jdom.jar
+END
+pso-workflow.jar
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/psolib/!svn/ver/343/PSORSSItemImporter/main/lib/pso-workflow.jar
+END
+informa.jar
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/psolib/!svn/ver/343/PSORSSItemImporter/main/lib/informa.jar
+END
+cglib-full-2.0.2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/psolib/!svn/ver/343/PSORSSItemImporter/main/lib/cglib-full-2.0.2.jar
+END
+ehcache-1.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/psolib/!svn/ver/343/PSORSSItemImporter/main/lib/ehcache-1.1.jar
+END

@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/psolib/!svn/ver/2548/PSORSSItemImporter/main
+END
+InstallExtensions.bat
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/psolib/!svn/ver/343/PSORSSItemImporter/main/InstallExtensions.bat
+END
+PSORSSItemImporter.zip
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/psolib/!svn/ver/2547/PSORSSItemImporter/main/PSORSSItemImporter.zip
+END
+deploy.xml
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/psolib/!svn/ver/2547/PSORSSItemImporter/main/deploy.xml
+END
+hibernate.cfg.xml
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/psolib/!svn/ver/343/PSORSSItemImporter/main/hibernate.cfg.xml
+END
+Extensions.xml
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/psolib/!svn/ver/386/PSORSSItemImporter/main/Extensions.xml
+END
+build.xml
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/psolib/!svn/ver/2548/PSORSSItemImporter/main/build.xml
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/psolib/!svn/ver/1859/PSORSSItemImporter/main/.classpath
+END
+spring-beans.dtd
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/psolib/!svn/ver/2547/PSORSSItemImporter/main/spring-beans.dtd
+END
+rssimport-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/psolib/!svn/ver/1859/PSORSSItemImporter/main/rssimport-config.xml
+END
+log4j.properties
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/psolib/!svn/ver/379/PSORSSItemImporter/main/log4j.properties
+END
+Readme.txt
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/psolib/!svn/ver/763/PSORSSItemImporter/main/Readme.txt
+END
+Whatsnew.txt
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/psolib/!svn/ver/1859/PSORSSItemImporter/main/Whatsnew.txt
+END
+Version.properties
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/psolib/!svn/ver/2547/PSORSSItemImporter/main/Version.properties
+END
+addProp.xslt
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/psolib/!svn/ver/1859/PSORSSItemImporter/main/addProp.xslt
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/psolib/!svn/ver/1859/PSORSSItemImporter/main/.project
+END
+build.number
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/psolib/!svn/ver/2547/PSORSSItemImporter/main/build.number
+END

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rssimport-config>
+	<channels>
+		<!-- The channel name corresponds to the RSS channel's <title> -->
+		<channel name="Hummingbird Item Import">
+			<contentType>Hummingbird DM Link</contentType>
+			<!-- Map RSS <item> elements and attributes to Rhythmyx fields -->
+			<itemFieldMap>
+				<field itemElement="sx:sync" itemAttribute="id" rxField="rss_syncid" dataType="text"/>
+				<field itemElement="sx:sync" itemAttribute="version" rxField="rss_versionid" dataType="text"/>
+				<field itemElement="title" rxField="sys_title" dataType="text"/>
+				<field itemElement="guid" rxField="rss_guid" dataType="text"/>
+				<field itemElement="psx:displaytitle" rxField="displaytitle" dataType="text"/>
+				<field itemElement="psx:description" rxField="description" dataType="text"/>
+				<field itemElement="psx:dm_docNum" rxField="dm_docNum" dataType="text"/>
+				<field itemElement="psx:dm_libraryName" rxField="dm_libraryName" dataType="text"/>
+				<field itemElement="psx:dm_author" rxField="dm_author" dataType="text"/>
+				<field itemElement="psx:dm_creationdate" rxField="dm_creationdate" dataType="text"/>
+<!--		(Note: dataType="date" and dateFormat attributes do not do anything...see doc for details
+				<field itemElement="psx:dm_creationdate" rxField="dm_creationdate" dataType="date" dateFormat="yyyy-MM-dd"/>-->
+				<field itemElement="psx:item" rxField="item" dataType="binary"/>
+				<field itemElement="" rxField="default_variantid" dataType="text" defaultValue="412"/>
+			</itemFieldMap>
+			<!-- Workflow -->
+			<workflow>
+				<doAfterNew>
+					<transition>DirecttoPublic</transition>
+				</doAfterNew>
+				<doBeforeEdit editPublic="yes" overrideCheckout="no"/>
+				<doAfterEdit returnToPublic="yes"/>
+				<doUnpublish overrideCheckout="no"/>
+			</workflow>
+			<!-- Synchronization support -->
+			<syncSupport>
+				<alwaysUpdate>yes</alwaysUpdate>
+				<lookupQuery resource="RSS_Import_Support/itemLookup">
+					<params>
+						<param name="syncid" itemElement="sx:sync" itemAttribute="id"/>
+					</params>
+				</lookupQuery>
+				<syncId itemElement="sx:sync" itemAttribute="id"/>
+				<version itemElement="sx:sync" itemAttribute="version"/>
+				<deleteFlag itemElement="sx:sync" itemAttribute="deleted"/>
+			</syncSupport>
+			<!-- Other -->
+			<defaultFolder>//Sites/Intranet/DM Link items</defaultFolder>
+			<postImportExtensions>
+				<extension className="com.percussion.pso.nw.rssimport.postprocessing.InsertAuthorAfterImport">
+					<param name="childIdFieldName" value="primeauthor"/>
+					<param name="relationshipType" value="Active Assembly"/>
+					<param name="slotId" value="5004"/>
+					<param name="variantId" value="312"/>
+				</extension>
+			</postImportExtensions>
+			<!-- (Used only if a proxy is needed for HTTP connections
+			<proxyServer>
+		      <host>proxy.company.com</host>
+		      <port>8100</port>
+			</proxyServer>-->
+		</channel>
+	</channels>
+</rssimport-config>

@@ -1,0 +1,14 @@
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="show_sql">true</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
+		<property name="connection.driver_class">net.sourceforge.jtds.jdbc.Driver</property>
+		<property name="connection.username">rhythmyx</property>
+		<property name="connection.password">rxpassword</property>
+		<property name="connection.url">jdbc:jtds:sqlserver://pooh/rxmaster</property>
+		<property name="cglib.use_reflection_optimizer">false</property>
+		<mapping jar="libExtras/pso-workflow.jar"/>
+	</session-factory>
+</hibernate-configuration>

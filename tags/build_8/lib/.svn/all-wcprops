@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/psolib/!svn/ver/764/PSORSSItemImporter/tags/build_8/lib
+END
+commons-collections-3.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/psolib/!svn/ver/764/PSORSSItemImporter/tags/build_8/lib/commons-collections-3.1.jar
+END
+commons-lang-2.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/psolib/!svn/ver/764/PSORSSItemImporter/tags/build_8/lib/commons-lang-2.1.jar
+END
+jdom.jar
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/psolib/!svn/ver/764/PSORSSItemImporter/tags/build_8/lib/jdom.jar
+END
+pso-workflow.jar
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/psolib/!svn/ver/764/PSORSSItemImporter/tags/build_8/lib/pso-workflow.jar
+END
+informa.jar
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/psolib/!svn/ver/764/PSORSSItemImporter/tags/build_8/lib/informa.jar
+END
+cglib-full-2.0.2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/psolib/!svn/ver/764/PSORSSItemImporter/tags/build_8/lib/cglib-full-2.0.2.jar
+END
+ehcache-1.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/psolib/!svn/ver/764/PSORSSItemImporter/tags/build_8/lib/ehcache-1.1.jar
+END
+commons-configuration-1.2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/psolib/!svn/ver/764/PSORSSItemImporter/tags/build_8/lib/commons-configuration-1.2.jar
+END
+dom4j-1.5.2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/psolib/!svn/ver/764/PSORSSItemImporter/tags/build_8/lib/dom4j-1.5.2.jar
+END
+jta.jar
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/psolib/!svn/ver/764/PSORSSItemImporter/tags/build_8/lib/jta.jar
+END
+commons-logging.jar
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/psolib/!svn/ver/764/PSORSSItemImporter/tags/build_8/lib/commons-logging.jar
+END
+psctoolkit5.jar
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/psolib/!svn/ver/764/PSORSSItemImporter/tags/build_8/lib/psctoolkit5.jar
+END
+hibernate3.jar
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/psolib/!svn/ver/764/PSORSSItemImporter/tags/build_8/lib/hibernate3.jar
+END

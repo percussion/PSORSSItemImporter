@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/psolib/!svn/ver/1859/PSORSSItemImporter/main/AppSupport
+END
+rssImportResult.dtd
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/psolib/!svn/ver/343/PSORSSItemImporter/main/AppSupport/rssImportResult.dtd
+END
+CreateItemFieldMapForConfig.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/psolib/!svn/ver/343/PSORSSItemImporter/main/AppSupport/CreateItemFieldMapForConfig.xsl
+END
