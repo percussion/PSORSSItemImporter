@@ -1,5 +1,6 @@
 PSORSSItemImporter
 ==================
+[Percussion Software](http://www.percussion.com "Percussion Software")
 
 This has been tested on Rhythmyx 5.6 and 5.7.
 
