@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+"http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+<bean id="multipartResolver"
+    class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+
+    <!-- one of the properties available; the maximum file size in bytes -->
+    <property name="maxUploadSize" value="100000"/>
+</bean>
+
+
+  <bean id="rssUploadController" class="com.percussion.pso.rssimport.PSOFeedUploadController">
+        <property name="commandClass" value="com.percussion.pso.rssimport.PSOFileUploadBean"/>
+ 	  <property name="formView"><value>form</value></property>
+  </bean>
+
+
+	<bean id="RSSImporterMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping" abstract="false" singleton="true" lazy-init="default" autowire="default" dependency-check="default">
+		<property name="mappings">
+			<props>
+				<prop key="RSSImportProcessor/processFiles">rssUploadController</prop>
+			</props>
+		</property>
+	</bean>
+
+ <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="viewClass"><value>org.springframework.web.servlet.view.JstlView</value></property>
+         <property name="prefix"><value>../../pages/</value></property>
+        <property name="suffix"><value>.jsp</value></property>
+    </bean>
+</beans>
