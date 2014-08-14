@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file is used in conjunction with com.percussion.util.PSExtensionInstallTool
+     to register extensions in bulk during deployment -->
+<PSXExtensionHandlerConfiguration handlerName="Java">
+	<Extension categorystring="user" context="user/" deprecated="no" handler="Java" name="PSORSSItemImporter" restoreRequestParamsOnError="no">
+		<initParam name="com.percussion.user.description">Creates content items from an RSS feed.</initParam>
+		<initParam name="com.percussion.extension.version">1</initParam>
+		<initParam name="com.percussion.extension.reentrant">yes</initParam>
+		<initParam name="className">com.percussion.pso.rssimport.PSORSSItemImporter</initParam>
+		<interface name="com.percussion.extension.IPSRequestPreProcessor"/>
+		<PSXExtensionParamDef id="0">
+			<name>rssImportParam</name>
+			<dataType>java.lang.String</dataType>
+			<description>The name of the incoming request’s HTML parameter that contains the RSS 2.0 document.</description>
+		</PSXExtensionParamDef>
+		<PSXExtensionParamDef id="0">
+			<name>statusParam</name>
+			<dataType>java.lang.String</dataType>
+			<description>The name of the private request object that will be added to the request containing the result text of the items’ creation or update. (Defaults to importStatusDoc).</description>
+		</PSXExtensionParamDef>
+		<suppliedResources/>
+	</Extension>
+</PSXExtensionHandlerConfiguration>

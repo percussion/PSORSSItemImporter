@@ -1,0 +1,10 @@
+March 29, 2006 ============================
+Fixed an issue with item-based doAfterNew transitions (the default transitions 
+were firing every time, regardless of whether or not the item was set to
+override them).
+March 10, 2006 ============================
+Added the rss_import_shared.xml shared group file to the zip file in /AppSupport, along
+with SQL statements for SQL Server and Oracle to create the table used by this shared 
+group and the support app itself.
+March 9, 2006 ============================
+Nothing!  This is the first build.
