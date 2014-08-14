@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:psx="http://www.percussion.com/psx/" xmlns:sx="http://www.microsoft.com/schemas/rss/sse/">
+	<channel>
+		<title>Hummingbird Item Import</title>
+		<description>A Hummingbird document's metadata, for import into Rhythmyx.</description>
+		<language>en-us</language>
+		<lastBuildDate/>
+		<item>
+			<sx:sync id="Jeff Test Document" version="2" deleted="false"/>
+			<title>Jeff Test Document</title>
+			<guid>EDMS1234</guid>
+			<psx:displaytitle>Here is the title of the document.</psx:displaytitle>
+			<psx:description>Here is the document's abstract.</psx:description>
+			<psx:dm_docNum>1234</psx:dm_docNum>
+			<psx:dm_libraryName>EDMS</psx:dm_libraryName>
+			<psx:dm_author>Jeff</psx:dm_author>
+			<psx:dm_creationdate>01-05-06 12:00:00</psx:dm_creationdate>
+			<psx:folderPath>//Sites/IMF Intranet/DM Link item</psx:folderPath>
+			<psx:doAfterNewTransitions>SUBMIT,PUBLISH</psx:doAfterNewTransitions>
+		</item>
+	</channel>
+</rss>
