@@ -1,0 +1,120 @@
+<project name="PSORSSItemImporter" default="testbuild" basedir=".">
+	<property name="src" location="src"/>
+	<property name="build" location="bin"/>
+	<property name="dist" location="dist"/>
+	<property name="lib" location="lib"/>
+	<property name="apidoc" location="apidoc" />
+	<property name="doc" location="doc" />	
+	<property name="rx_home" location="C:\Rhythmyx_08R01"/>
+	<path id="rssimport.classpath">
+		<pathelement location="${src}"/>
+		<pathelement location="${build}"/>
+		<fileset dir="${rx_home}/lib">
+			<include name="**/*.jar"/>
+		</fileset>
+		<fileset dir="${lib}">
+			<include name="**/*.jar"/>
+		</fileset>
+	</path>
+	<target name="init">
+		<!-- Create the time stamp -->
+		<tstamp/>
+		<!-- Create the build directory structure used by compile -->
+		<mkdir dir="${dist}"/>
+		<mkdir dir="${build}"/>
+	</target>
+	<target name="compile" depends="init">
+		<javac srcdir="${src}" destdir="${build}" debug="on">
+    		<classpath refid="rssimport.classpath"/>      
+	    </javac>
+		<copy file="log4j.properties" todir="${build}" />
+    </target>
+	<target name="javadoc" depends="compile">
+		<mkdir dir="${apidoc}"/>
+		<javadoc destdir="${apidoc}" access="package">
+			<packageset dir="${src}" defaultexcludes="yes">
+				<include name="com/percussion/pso/rssimport/**"/>
+			</packageset>
+			<classpath refid="rssimport.classpath"/>
+			<link href="file:/${rx_home}/Docs/Rhythmyx/Javadocs" />
+			<link href="http://java.sun.com/j2se/1.4/docs/api" />
+		</javadoc>
+	</target>
+	<target name="jarbuilder" description="Build the jar file" >
+	    <mkdir dir="${dist}/lib"/>
+		<propertyfile file="./Version.properties">
+		    <entry key="Rhythmyx.version" value="5.6" /> 
+			<entry key="build.number" value="${build.number}"/>
+			<entry key="build.date" type="date" pattern="EEEE MMM dd yyyy" value="now"/>
+		</propertyfile>
+		<jar jarfile="${dist}/lib/PSORSSItemImporter.jar" >
+		   <fileset file="./Version.properties" />
+		   <fileset dir="${build}" casesensitive="no">
+				<include name="com/percussion/pso/rssimport/*.class"/>
+	        </fileset>
+		</jar>	
+	</target>
+	<target name="dist" depends="clean,javadoc" description="generate the distribution">
+		<!-- Create the distribution directory -->
+		<buildnumber/>
+		<antcall target="jarbuilder"/>
+		<copy file="Extensions.xml" toDir="${dist}" /> 
+		<copy file="hibernate.cfg.xml" toDir="${dist}" />
+		<copy file="InstallExtensions.bat" toDir="${dist}" />
+		<copy file="InstallExtensions.sh" toDir="${dist}" />
+		<copy file="log4j.properties" todir="${dist}" />		
+		<copy file="Readme.txt" toDir="${dist}" /> 
+		<copy file="RhythmyxServer.cp2" toDir="${dist}" />
+		<copy file="rssimport-config.xml" toDir="${dist}" />
+		<copy file="Version.properties" toDir="${dist}" />
+		<copy file="Whatsnew.txt" toDir="${dist}" />
+		<copy todir="${dist}/AppSupport">
+			<fileset dir="AppSupport">
+				<include name="**/*.*"/>
+			</fileset>
+		</copy>
+		<copy todir="${dist}/Samples">
+			<fileset dir="Samples">
+				<include name="**/*.*"/>
+			</fileset>
+		</copy>
+		<copy todir="${dist}/lib">
+			<fileset dir="${lib}">
+				<include name="**/*.*"/>
+			</fileset>
+		</copy>
+		<copy todir="${dist}/doc">
+			<fileset dir="${doc}">
+				<include name="**/*.*"/>
+			</fileset>
+		</copy>
+		<zip destfile="PSORSSItemImporter.zip" update="no" basedir="${dist}">
+		   <zipfileset dir="${src}" prefix="src" />
+		   <zipfileset dir="${apidoc}" prefix="apidoc" /> 
+		</zip>
+	</target>
+	<target name="clean" description="clean up">
+		<!-- Delete the ${build} and ${dist} directory trees -->
+		<delete dir="${build}"/>
+		<delete dir="${dist}"/>
+		<delete dir="${apidoc}"/>
+	</target>
+	<target name="testbuild" depends="compile" description="Build for test in local server">
+		<property file="build.number"/>
+	    <antcall target="jarbuilder"/>
+	</target>
+	<target name="testConfig" depends="clean, compile">
+		<java classname="testing.PSORSSImportConfigReaderTest" fork="on">
+			<!-- always use Xerces for SAX parsing (i.e., don't use Saxon) -->
+			<jvmarg value="-Djavax.xml.parsers.SAXParserFactory=org.apache.xerces.jaxp.SAXParserFactoryImpl"/>
+			<classpath refid="rssimport.classpath"/>
+		</java>
+	</target>	
+	<target name="testRssRead" depends="clean, compile">
+		<java classname="testing..PSORSSReaderTest" fork="on">
+			<!-- always use Xerces for SAX parsing (i.e., don't use Saxon) -->
+			<jvmarg value="-Djavax.xml.parsers.SAXParserFactory=org.apache.xerces.jaxp.SAXParserFactoryImpl"/>
+			<classpath refid="rssimport.classpath"/>
+		</java>
+	</target>
+</project>
